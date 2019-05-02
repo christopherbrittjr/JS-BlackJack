@@ -19,15 +19,14 @@ let textArea = document.getElementById('text-area'),
 let getStarted = false,
     gameOver = false,
     playerWon = false,
-    dealerCards = [],
-    hitButton.style.display = 'none';
-    stayButton.style.display = 'none';
+    dealerCards = [],    
     playerCards = [],
     dealerScore = 0,
     playerScore = 0,
     deck = [];
 
-
+hitButton.style.display = 'none';
+stayButton.style.display = 'none';
 showStatus();
 
 newGameButton.addEventListener('click', function () {
@@ -38,8 +37,8 @@ newGameButton.addEventListener('click', function () {
 
     deck = createDeck();
     shuffleDeck(deck);
-    dealerCards = [getNextCard, getNextCard];
-    playerCards = [getNextCard, getNextCard];
+    dealerCards = [getNextCard(), getNextCard()];
+    playerCards = [getNextCard(), getNextCard()];
 
     newGameButton.style.display = 'none';
     hitButton.style.display = 'inline';
@@ -47,7 +46,7 @@ newGameButton.addEventListener('click', function () {
     showStatus();
 });
 
-hitButton.addEventListener('click', function () {
+hitButton.addEventListener('click', function (){
     playerCards.push(getNextCard());
     checkForEndOfGame();
     showStatus();
