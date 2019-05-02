@@ -35,6 +35,7 @@
     <Content Include="index.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="libman.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
