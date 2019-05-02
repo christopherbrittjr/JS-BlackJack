@@ -59,6 +59,7 @@ function createDeck() {
     return deck;
 }
 
+//Shuffles Deck
 function shuffleDeck(deck) {
     for (let i = 0; i < deck.length; i++) {
         let swapIdx = Math.trunc(Math.random() * deck.length);
@@ -72,13 +73,21 @@ function getCardString(card) {
     return card.value + ' of ' + card.suit;
 }
 
+function getNextCard() {
+    return deck.shift();
+}
+
 function showStatus() {
     if (!gameStarted) {
         textArea.innerText = 'Welcome to Blackjack!';
         return;
     }
-}
 
+
+    for (var i = 0; i < deck.length; i++) {
+        textArea.innerText += '\n' + getCardString(deck[i]);
+    }
+}
 
 
 
