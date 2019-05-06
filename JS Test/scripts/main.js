@@ -4,6 +4,7 @@
 //
 
 //Card variables
+"use strict"
 let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'],
     values = ['Ace', 'King', 'Queen', 'Jack',
               'Ten', 'Nine', 'Eight', 'Seven', 'Six',
